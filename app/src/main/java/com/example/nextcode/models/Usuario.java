@@ -1,5 +1,7 @@
 package com.example.nextcode.models;
 
+import java.util.ArrayList;
+
 public class Usuario {
 
     private int id;
@@ -10,6 +12,20 @@ public class Usuario {
     private String correo;
     private String status;
 
+    private ArrayList<Plan> planes;
+
+
+    public Usuario(){
+        planes = new ArrayList<>();
+    }
+
+    public void setPlan(Plan plan){
+        planes.add(plan);
+    }
+
+    public ArrayList<Plan> getPlanes(){
+        return this.planes;
+    }
 
     public int getId() {
         return id;

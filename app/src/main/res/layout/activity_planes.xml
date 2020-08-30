@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlanesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_regresar"
+            android:background="@color/colorPrimaryDark"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Mis Planes Contratados" />
+
+            <ImageButton
+                android:id="@+id/btn_nuevo"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+        <ListView
+            android:layout_marginTop="25dp"
+            android:id="@+id/lv_planes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

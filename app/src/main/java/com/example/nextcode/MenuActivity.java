@@ -65,7 +65,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         }else if(v==cv_facturas){
 
         }else if(v==cv_planes){
-
+            Intent intent = new Intent(MenuActivity.this, PlanesActivity.class);
+            //Clear all activities and start new task
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }else if(v==cv_salir){
             if(ds.sessionClose(usuario.getId())>=0){
                 Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
